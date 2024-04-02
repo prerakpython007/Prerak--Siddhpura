@@ -883,6 +883,11 @@ ul .about-links::marker{
     }
 }
 
+/* Blog 3 */
 
+.blog3-gif{
+    width: 100%;
+    border-radius: 10px;
+}
 
 
