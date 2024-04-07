@@ -284,6 +284,7 @@ a{
     border-radius: 30px; /* adjust as needed */
     padding:20px 20px;
     text-decoration: none;
+    transition:  0.3s ease;
 }
 
 .resume{
@@ -299,7 +300,17 @@ a{
     border-radius: 30px; /* adjust as needed */
     margin-top: 25px;
     padding: 20px 20px; 
+    transition:  0.3s ease;
+}
+
+
+.hire-me:hover{
+    background-color: #2e5aebcc;
     
+}
+
+.resume:hover{
+    background-color: rgb(109, 124, 147);
 }
 
 .resume-link{
