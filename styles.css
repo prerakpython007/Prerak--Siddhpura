@@ -902,3 +902,174 @@ ul .about-links::marker{
 }
 
 
+/* The switch - the box around the slider */
+.switch {
+    display: block;
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+    position: absolute;
+    right: 560px;
+    top: 50px;
+  }
+
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon,1.4em);
+    width: var(--size-of-icon,1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset,0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+    ;
+   transition: .4s;
+  }
+  
+  input:checked + .slider {
+     background-color: #303136;
+  } 
+  
+  input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+  }
+
+
+  .btn-conteiner {
+    display: flex;
+    justify-content: center;
+    --color-text: #9ee5fa;
+    --color-outline: #9ee5fa80;
+    --color-shadow: #00000080;
+  }
+  
+  .btn-content {
+    display: flex;
+    align-items: center;
+    padding: 0px 3px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    color: var(--color-text);
+    background: var(--color-background);
+    transition: 1s;
+    border-radius: 100px;
+    box-shadow: 0 0 0.2em 0 var(--color-background);
+    
+  }
+  
+  .btn-content:hover,
+  .btn-content:focus {
+    transition: 0.5s;
+    -webkit-animation: btn-content 1s;
+    animation: btn-content 1s;
+    outline: 0.1em solid transparent;
+    outline-offset: 0.2em;
+    box-shadow: 0 0 0.4em 0 var(--color-background);
+  }
+  
+  .btn-content .icon-arrow {
+    transition: 0.5s;
+    margin-right: 0px;
+    transform: scale(0.6);
+  }
+  
+  .btn-content:hover .icon-arrow {
+    transition: 0.5s;
+    margin-right: 25px;
+  }
+  
+  .icon-arrow {
+    width: 20px;
+    margin-left: 15px;
+    position: relative;
+    top: 6%;
+  }
+  
+  /* SVG */
+  #arrow-icon-one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+  }
+  
+  #arrow-icon-two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+  }
+  
+  .btn-content:hover #arrow-icon-three {
+    animation: color_anim 1s infinite 0.2s;
+  }
+  
+  .btn-content:hover #arrow-icon-one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+  }
+  
+  .btn-content:hover #arrow-icon-two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+  }
+  
+  /* SVG animations */
+  @keyframes color_anim {
+    0% {
+      fill: white;
+    }
+  
+    50% {
+      fill: var(--color-background);
+    }
+  
+    100% {
+      fill: #9ee5fa;
+    }
+  }
+  
+  /* Button animations */
+  @-webkit-keyframes btn-content {
+    0% {
+      outline: 0.2em solid var(--color-background);
+      outline-offset: 0;
+    }
+  }
+  
+  @keyframes btn-content {
+    0% {
+      outline: 0.2em solid var(--color-background);
+      outline-offset: 0;
+    }
+  }
+  
+  
