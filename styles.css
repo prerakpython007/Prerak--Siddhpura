@@ -18,7 +18,7 @@
 
 /* Customizes the scrollbar thumb on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.8); /* Darker shade on hover for better visibility */
+    background: rgba(70, 70, 70, 0.867); /* Darker shade on hover for better visibility */
 }
 
 
