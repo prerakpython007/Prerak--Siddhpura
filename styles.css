@@ -1,6 +1,26 @@
+/* Base styles */
+
+/* Customizes the whole scrollbar */
 ::-webkit-scrollbar {
-    display: none;
+    width: 10px; /* Adjust the width of the scrollbar */
 }
+
+/* Customizes the background of the scrollbar track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5); /* Makes the track background transparent */
+}
+
+/* Customizes the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: #959595; /* Semi-transparent black */
+    border-radius: 6px; /* Rounded corners */
+}
+
+/* Customizes the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.8); /* Darker shade on hover for better visibility */
+}
+
 
 body {
     transition: background-color 0.5s ease, color 0.5s ease;
@@ -43,6 +63,8 @@ body.light-theme {
     .blog3-gif{
         box-shadow: 0 0 40px 0px #303136 ;
     }
+
+    
   }
   
   body.dark-theme {
@@ -79,7 +101,10 @@ body.light-theme {
     .all-a{
         color: rgb(203 ,213, 225 );
     }
+    
   }
+
+
 
 
 
