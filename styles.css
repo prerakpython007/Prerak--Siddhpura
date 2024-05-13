@@ -1,5 +1,18 @@
-*{
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+/* styles.css */
+body.light-theme {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  body.dark-theme {
     background-color: rgb(2, 6 ,23);
+    color: #ffffff;
+  }
+
+*{
     font-family: ui-sans-serif, system-ui, sans-serif, apple color emoji, segoe ui emoji, Segoe UI Symbol, noto color emoji;
 }
 
@@ -243,7 +256,7 @@ a{
 }
 
 .tag-line{
-    color: rgb(203 ,213, 225 );
+    /* color: rgb(203 ,213, 225 ); */
     text-align: center;
     font-size:xx-large;
 }
@@ -366,7 +379,7 @@ a{
     font-family: 'PT Sans', sans-serif;
 
     display: none;
-    color: #cfcee2;
+    /* color: #cfcee2; */
 }
 
 @media (min-width: 1024px){
@@ -903,21 +916,25 @@ ul .about-links::marker{
 
 
 /* The switch - the box around the slider */
-.switch {
-    display: block;
-    --width-of-switch: 3.5em;
-    --height-of-switch: 2em;
-    /* size of sliding icon -- sun and moon */
-    --size-of-icon: 1.4em;
-    /* it is like a inline-padding of switch */
-    --slider-offset: 0.3em;
-    position: relative;
-    width: var(--width-of-switch);
-    height: var(--height-of-switch);
-    position: absolute;
-    right: 560px;
-    top: 50px;
-  }
+@media (min-width:1024px){
+    .switch {
+        display: block;
+        --width-of-switch: 3.5em;
+        --height-of-switch: 2em;
+        /* size of sliding icon -- sun and moon */
+        --size-of-icon: 1.4em;
+        /* it is like a inline-padding of switch */
+        --slider-offset: 0.3em;
+        position: relative;
+        width: var(--width-of-switch);
+        height: var(--height-of-switch);
+        position: absolute;
+        right: 560px;
+        top: 50px;
+      }
+}
+
+
 
   
   /* Hide default HTML checkbox */
@@ -1071,5 +1088,41 @@ ul .about-links::marker{
       outline-offset: 0;
     }
   }
+
+  @media (min-width:1024px){
+    .switch2 {
+        visibility: hidden;
+        display: block;
+        --width-of-switch: 3.5em;
+        --height-of-switch: 2em;
+        /* size of sliding icon -- sun and moon */
+        --size-of-icon: 1.4em;
+        /* it is like a inline-padding of switch */
+        --slider-offset: 0.3em;
+        position: relative;
+        width: var(--width-of-switch);
+        height: var(--height-of-switch);
+        position: absolute;
+        right: 560px;
+        top: 50px;
+      }
+  }
+
+  .switch2 {
+    display: block;
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+    position: absolute;
+    right: 100px;
+    top: 45px;
+  }
+  
   
   
